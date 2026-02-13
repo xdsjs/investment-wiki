@@ -1,4 +1,19 @@
 {
   "version": "1.0.0",
-  "companies": {}
+  "companies": {
+    "HOOD": {
+      "name": "Robinhood Markets, Inc.",
+      "last_updated": "2026-02-13T19:15:00+08:00",
+      "modules": {
+        "company_profile": {
+          "version": "1.0",
+          "updated_at": "2026-02-13T19:15:00+08:00"
+        },
+        "business_model": {
+          "version": "1.0", 
+          "updated_at": "2026-02-13T19:15:00+08:00"
+        }
+      }
+    }
+  }
 }

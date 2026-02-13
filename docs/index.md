@@ -1,23 +1,15 @@
 # Investment Wiki
 
-美股上市公司投资分析知识库。由 AI Agent 自动生成并维护。
+## Analyzed Companies
 
-## 已分析公司
+- [HOOD - Robinhood Markets, Inc.](companies/HOOD/index.md)
 
-| 公司 | 代码 | 行业 | 最后更新 |
-|------|------|------|---------|
+## About This Wiki
 
-*暂无已分析公司。使用 `/wiki {TICKER}` 开始分析第一家公司。*
+This wiki contains detailed investment analysis for US public companies, including:
+- SEC filings metadata and key documents
+- Business model analysis
+- Financial metrics and fundamentals
+- Investment thesis and risk assessment
 
-## 关于
-
-本 Wiki 由多 Agent 系统自动生成，包含以下分析模块：
-
-- **基本介绍** -- 公司概况、SEC 信息
-- **商业模式分析** -- 价值链、收入结构、护城河、增长驱动
-
-数据来源：SEC EDGAR、Yahoo Finance、公开信息搜索。
-
----
-
-*自动更新 | 数据仅供参考，不构成投资建议*
+Last updated: February 13, 2026
