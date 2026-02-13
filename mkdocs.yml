@@ -1,34 +1,45 @@
 site_name: Investment Wiki
-site_description: 美股上市公司投资分析 Wiki
+site_description: 美股上市公司投资分析
 site_url: ""
 
 theme:
   name: material
   language: zh
+  custom_dir: docs/overrides
+  font:
+    text: Inter
+    code: JetBrains Mono
+  icon:
+    logo: material/chart-line
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-7
         name: 切换到深色模式
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-4
         name: 切换到浅色模式
   features:
-    - navigation.tabs
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
     - navigation.sections
     - navigation.expand
     - navigation.top
+    - navigation.indexes
     - search.suggest
     - search.highlight
     - content.tabs.link
-    - toc.integrate
+    - content.code.copy
+    - toc.follow
+    - header.autohide
 
 plugins:
   - search:
@@ -41,10 +52,23 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - attr_list
   - md_in_html
+  - def_list
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
   - toc:
       permalink: true
 
+extra_css:
+  - stylesheets/extra.css
+
 extra:
-  social: []
+  generator: false

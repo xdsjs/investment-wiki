@@ -1,0 +1,293 @@
+/* ═══════════════════════════════════════════
+   Investment Wiki — Minimal Tech Theme
+   ═══════════════════════════════════════════ */
+
+/* ── Color Palette: Light ── */
+:root {
+  --md-primary-fg-color: #0f172a;
+  --md-primary-fg-color--light: #1e293b;
+  --md-primary-fg-color--dark: #020617;
+  --md-accent-fg-color: #0ea5e9;
+  --md-accent-fg-color--transparent: rgba(14, 165, 233, 0.08);
+  --wiki-card-border: #e2e8f0;
+  --wiki-card-hover: #0ea5e9;
+  --wiki-metric-accent: #0ea5e9;
+  --wiki-bg-subtle: #f8fafc;
+}
+
+/* ── Color Palette: Dark ── */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #0f172a;
+  --md-primary-fg-color--light: #1e293b;
+  --md-primary-fg-color--dark: #020617;
+  --md-accent-fg-color: #38bdf8;
+  --md-accent-fg-color--transparent: rgba(56, 189, 248, 0.06);
+  --md-default-bg-color: #0c1222;
+  --md-default-bg-color--light: #111827;
+  --md-default-bg-color--lighter: #1e293b;
+  --wiki-card-border: #1e293b;
+  --wiki-card-hover: #38bdf8;
+  --wiki-metric-accent: #38bdf8;
+  --wiki-bg-subtle: #111827;
+}
+
+/* ── Global ── */
+.md-typeset {
+  line-height: 1.7;
+}
+
+/* ── Subtitle under H1 ── */
+.md-typeset .subtitle {
+  font-size: 1.05rem;
+  color: var(--md-default-fg-color--light);
+  margin-top: -0.8rem;
+  margin-bottom: 0;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+/* ── Typography ── */
+.md-typeset h1 {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  font-size: 2rem;
+}
+
+.md-typeset h2 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: 1.3rem;
+  border-bottom: 2px solid var(--md-accent-fg-color--transparent);
+  padding-bottom: 0.5em;
+  margin-top: 2em;
+}
+
+.md-typeset h3 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* ── Tables ── */
+.md-typeset table:not([class]) {
+  font-size: 0.84rem;
+  border: 1px solid var(--wiki-card-border);
+  border-radius: 10px;
+  overflow: hidden;
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--wiki-bg-subtle);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: var(--md-default-fg-color--light);
+  padding: 0.7em 1.2em;
+}
+
+.md-typeset table:not([class]) td {
+  padding: 0.65em 1.2em;
+  border-top: 1px solid var(--wiki-card-border);
+}
+
+.md-typeset table:not([class]) tbody tr:hover {
+  background: var(--md-accent-fg-color--transparent);
+}
+
+/* ── Admonitions ── */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 10px;
+  border-width: 0;
+  border-left: 3px solid;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  font-size: 0.88rem;
+}
+
+.md-typeset .admonition .admonition-title,
+.md-typeset details summary {
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+}
+
+/* ── Blockquote ── */
+.md-typeset blockquote {
+  border-left: 3px solid var(--md-accent-fg-color);
+  color: var(--md-default-fg-color--light);
+  font-size: 0.85rem;
+  padding: 0.3em 1em;
+  margin: 0.8em 0;
+  background: var(--md-accent-fg-color--transparent);
+  border-radius: 0 8px 8px 0;
+}
+
+/* ══════════════════════════════
+   Cards
+   ══════════════════════════════ */
+.wiki-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.8rem;
+  margin: 1.2rem 0;
+}
+
+.wiki-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  border: 1px solid var(--wiki-card-border);
+  border-radius: 12px;
+  padding: 1.2rem 1.4rem;
+  text-decoration: none !important;
+  color: inherit !important;
+  transition: all 0.15s ease;
+  background: var(--md-default-bg-color);
+}
+
+.wiki-card:hover {
+  border-color: var(--wiki-card-hover);
+  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.1);
+  transform: translateY(-2px);
+}
+
+.wiki-card-ticker {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--md-accent-fg-color);
+}
+
+.wiki-card-name {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--md-default-fg-color);
+}
+
+.wiki-card-meta {
+  font-size: 0.76rem;
+  color: var(--md-default-fg-color--light);
+  letter-spacing: 0.01em;
+}
+
+/* ══════════════════════════════
+   Status Badges
+   ══════════════════════════════ */
+.status-ok {
+  display: inline-block;
+  background: linear-gradient(135deg, #059669, #10b981);
+  color: white;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.2em 0.7em;
+  border-radius: 999px;
+  letter-spacing: 0.03em;
+  vertical-align: middle;
+  margin-top: 0.2rem;
+}
+
+.status-pending {
+  display: inline-block;
+  background: linear-gradient(135deg, #d97706, #f59e0b);
+  color: white;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.2em 0.7em;
+  border-radius: 999px;
+  letter-spacing: 0.03em;
+  vertical-align: middle;
+}
+
+/* ══════════════════════════════
+   Metrics Grid
+   ══════════════════════════════ */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.6rem;
+  margin: 1.2rem 0;
+}
+
+.metric-item {
+  border: 1px solid var(--wiki-card-border);
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  text-align: center;
+  background: var(--md-default-bg-color);
+  transition: border-color 0.15s ease;
+}
+
+.metric-item:hover {
+  border-color: var(--wiki-metric-accent);
+}
+
+.metric-item .label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.metric-item .value {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--wiki-metric-accent);
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.metric-item .value.sm {
+  font-size: 0.9rem;
+}
+
+/* ══════════════════════════════
+   Tabs (Content Tabs)
+   ══════════════════════════════ */
+.md-typeset .tabbed-labels > label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* ══════════════════════════════
+   Footer Note
+   ══════════════════════════════ */
+.md-typeset .footer-note {
+  font-size: 0.75rem;
+  color: var(--md-default-fg-color--lightest);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* ══════════════════════════════
+   Layout
+   ══════════════════════════════ */
+.md-content__inner {
+  max-width: 54rem;
+}
+
+/* ── Navigation ── */
+.md-nav__link {
+  font-size: 0.84rem;
+}
+
+/* ── Scrollbar (dark mode) ── */
+[data-md-color-scheme="slate"] ::-webkit-scrollbar {
+  width: 6px;
+}
+
+[data-md-color-scheme="slate"] ::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+
+/* ── Header ── */
+.md-header {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
