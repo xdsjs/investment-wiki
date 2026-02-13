@@ -1,18 +1,22 @@
 {
-  "ticker": "HOOD",
   "company_name": "Robinhood Markets, Inc.",
-  "last_updated": "2026-02-13T19:15:00+08:00",
+  "ticker": "HOOD",
+  "last_updated": "2026-02-13T19:55:00+08:00",
   "modules": {
     "company_profile": {
-      "version": "1.0",
-      "updated_at": "2026-02-13T19:15:00+08:00",
-      "status": "completed"
+      "version": "2.0",
+      "updated_at": "2026-02-13T19:55:00+08:00"
     },
     "business_model": {
-      "version": "1.0", 
-      "updated_at": "2026-02-13T19:15:00+08:00",
-      "status": "completed"
+      "version": "2.0",
+      "updated_at": "2026-02-13T19:55:00+08:00"
     }
   },
-  "errors": []
+  "sources": {
+    "sec_filings": {
+      "latest_10k": "2024-12-31",
+      "latest_10q": "2025-03-31"
+    },
+    "yahoo_finance": "2026-02-13"
+  }
 }
