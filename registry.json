@@ -42,6 +42,20 @@
           "updated_at": "2026-02-14T15:10:00+08:00"
         }
       }
+    },
+    "STZ": {
+      "name": "Constellation Brands, Inc.",
+      "last_updated": "2026-02-14T16:15:00+08:00",
+      "modules": {
+        "company_profile": {
+          "version": "1.1",
+          "updated_at": "2026-02-14T16:15:00+08:00"
+        },
+        "business_model": {
+          "version": "1.1",
+          "updated_at": "2026-02-14T16:15:00+08:00"
+        }
+      }
     }
   }
 }
